@@ -118,7 +118,7 @@ public class Transactions {
             jp.setName("next");
             if(i>0)
             {
-                hl.setText(t[i]);
+                hl.setText(t[--i]);
             }
             else
                 hl.setText("You need to click previous first");
