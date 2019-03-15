@@ -45,6 +45,7 @@ public class Transactions {
     }
     
     public void dposite(String amount) {
+        try{
        double deposit = Double.valueOf(amount);
        if(deposit>0)
         {
@@ -58,9 +59,14 @@ public class Transactions {
         }
         else 
            callGUI(false);
+        }catch(Exception e)
+        {
+            callGUI(false);
+        }
     }
     
    public void withdraw(String amount) {
+       try{
        double withdraw = Double.valueOf(amount);
         if(balance >= withdraw && withdraw>0)
         {
@@ -74,6 +80,10 @@ public class Transactions {
         }
         else
             callGUI(false);
+       }catch(Exception e)
+        {
+            callGUI(false);
+        }
       
     }
 
